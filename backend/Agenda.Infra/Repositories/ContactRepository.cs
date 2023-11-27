@@ -34,9 +34,9 @@ namespace Agenda.Infra.Repositories
 
             if (existingContact != null)
             {
-                existingContact.FullName = existingContact.FullName;
-                existingContact.Email = existingContact.Email;
-                existingContact.PhoneNumber = existingContact.PhoneNumber;
+                existingContact.FullName = contact.FullName;
+                existingContact.Email = contact.Email;
+                existingContact.PhoneNumber = contact.PhoneNumber;
 
                 await _context.SaveChangesAsync();
             }
