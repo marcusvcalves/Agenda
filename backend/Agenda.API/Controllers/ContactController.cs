@@ -59,10 +59,8 @@ namespace Agenda.API.Controllers
                 await _contactRepository.UpdateAsync(id, contact);
                 return Ok(contactToUpdate);
             }
-            else
-            {
-                return NotFound();
-            }
+
+            return NotFound();
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
@@ -74,11 +72,8 @@ namespace Agenda.API.Controllers
                 await _contactRepository.DeleteAsync(id);
                 return Ok(contactToDelete);
             }
-            else
-            {
-                return NotFound();
-            }
+            
+            return NotFound();
         }
-
     }
 }
